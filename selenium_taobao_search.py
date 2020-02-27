@@ -26,7 +26,6 @@ def index_page(page):
         browser.get(url)
         time.sleep(2)
         if page > 1:
-            window.setTimeout(function, milliseconds)
             inputs = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, '#mainsrp-pager div.form > input')))
             # browser.execute_script('myVar=window.setInterval(function(){}, 2000)')
             # browser.execute_script('clearTimeout(myVar)')
@@ -119,8 +118,8 @@ def main():
 # chrome_options.add_argument('--headless')
 # browser = webdriver.Chrome(chrome_options=chrome_options)
 
-browser = webdriver.Chrome()
-browser.maximize_window()
-wait = WebDriverWait(browser, 4)
 if __name__ == '__main__':
+    browser = webdriver.Chrome()
+    browser.maximize_window()
+    wait = WebDriverWait(browser, 4)
     main()
